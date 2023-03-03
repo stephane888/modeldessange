@@ -1,0 +1,29 @@
+{% if content %}
+	<div{{ attributes.addClass(['option-list']) }}>
+		<div class="text">
+			{% if content.title %}
+        		<h6 {{ region_attributes.title.addClass('title') }}>
+        			{{ content.title }}
+        		</h6>
+    		{% endif %}
+    		{% if content.desc %}
+        		<div {{ region_attributes.desc.addClass('desc') }}>
+        			{{ content.desc }}
+        		</div>
+    		{% endif %}    		
+		</div>
+		<div class="option-info">
+			{% if content.price or content.duree %}
+				<div class="info-price">
+					<div {{ region_attributes.price.addClass(['price']) }}>
+					    {{ content.price|layout_value }}
+					</div>
+					<div {{ region_attributes.duree.addClass(['duree','time']) }}>
+					    {{ content.duree|layout_value }}
+					</div>
+				</div>				
+			{% endif %}
+			{{ content.url_rdv }}
+		</div>
+	</div>
+{% endif %}

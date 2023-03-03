@@ -1,0 +1,2 @@
+import "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/salon-dessange/molecule/salon-infos.scss";
+import "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/salon-dessange/js/horaire-accordeon.js";

@@ -1,0 +1,34 @@
+{% if content %}
+<div {{ attributes.addClass(['sd-avis-section']) }}>
+	<div class="container">
+		<h2 {{ region_attributes.title.addClass(['sdt-title','title']) }}>
+			{{ content.title|layout_value }} 
+		</h2>
+		<div class="avis-bloc">
+			{% if content.bloc_buttons %}
+			<div
+				{{ region_attributes.bloc_buttons.addClass(['d-flex justify-content-center','bloc_buttons']) }}>
+				{{ content.bloc_buttons }}
+			</div>
+			{% endif %}
+			{% if content.bloc_notes %}
+			<div {{ region_attributes.bloc_notes.addClass(['bloc_notes']) }}>
+				{{ content.bloc_notes }}
+			</div>
+			{% endif %}
+			{% if content.bloc_avis %}
+			<div
+				{{ region_attributes.bloc_avis.addClass(['bloc_avis','avis-bloc-content']) }}>
+				{{ content.bloc_avis }}
+			</div>
+			{% endif %}
+		</div>
+		{% if content.add_avis %}
+		<div
+			{{ region_attributes.add_avis.addClass(['add_avis','justify-content-center','d-flex']) }}>
+			{{ content.add_avis|array_elements }}
+		</div>
+		{% endif %}
+	</div>
+</div>
+{% endif %}

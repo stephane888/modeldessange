@@ -1,0 +1,12 @@
+{% if content %}
+	<div {{ attributes.addClass('sd-tarifs-card') }}>
+		<div class="title-content">
+			<h5 {{ region_attributes.title.addClass('title') }}> {{ content.title }} </h5>
+			<div {{ region_attributes.title.addClass(['description','body']) }}> {{ content.body|layout_value }} </div>
+			<div class="dots">...</div>
+		</div>
+		<div {{ region_attributes.price.addClass(['tarif-bloc','price']) }}>
+			{{ content.price }}
+		</div>
+	</div>
+{% endif %}

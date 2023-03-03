@@ -1,0 +1,15 @@
+{% if content %}
+	<div {{ attributes.addClass('sd-option-list') }}>
+		<div class="sol-header">
+			{% if content.title %}
+				<h4 {{ region_attributes.title.addClass(['list-title']) }}> {{ content.title }} </h4>
+			{% endif %}
+			{% if content.desc %}
+				<div {{ region_attributes.desc.addClass(['list-desc','desc']) }}> {{ content.desc }} </div>
+			{% endif %}
+		</div>
+        {% if content.prestations %}
+				<div {{ region_attributes.prestations.addClass(['prestations']) }}> {{ content.prestations }} </div>
+		{% endif %}
+	</div>
+{% endif %}

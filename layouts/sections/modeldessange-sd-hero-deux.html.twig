@@ -1,0 +1,30 @@
+{% if content %}
+{% if content.image_bg.layout_builder_add_block %}
+{{ content.image_bg }}
+{% endif %}
+{% if content.image_bg|layout_bg_img %}
+{% set attributes=attributes.merge(content.image_bg|layout_bg_img) %}
+{% endif %}
+<div {{ attributes.addClass(['sd-hero-deux']) }}>
+	<div class="container">
+		<div class="hero-content">
+			<h2 {{ region_attributes.title.addClass('title') }}>
+				{{ content.title }}
+			</h2>
+			<div class="location-info">
+				<div class="localisation">
+					{% if content.icone_location %}
+					    {{ content.icone_location }}
+					{% endif %}
+					{% if content.location %}
+					    {{ content.location }}
+					{% endif %}
+				</div>
+				{% if content.bloc_avis %}
+				    {{ content.bloc_avis }}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endif %}
