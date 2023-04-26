@@ -25,7 +25,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  * )
  */
 class ModeldessangeSdHero extends FormatageModelsSection {
-
+  
   /**
    *
    * {@inheritdoc}
@@ -34,9 +34,9 @@ class ModeldessangeSdHero extends FormatageModelsSection {
   public function __construct(array $configuration, $plugin_id, $plugin_definition, StylesGroupManager $styles_group_manager) {
     // TODO Auto-generated method stub
     parent::__construct($configuration, $plugin_id, $plugin_definition, $styles_group_manager);
-    $this->pluginDefinition->set('icon', drupal_get_path('module', 'modeldessange') . "/icones/sections/clothingslayoutshero.png");
+    $this->pluginDefinition->set('icon', drupal_get_path('module', 'modeldessange') . "/icones/sections/modeldessange_sd_hero.png");
   }
-
+  
   /**
    *
    * {@inheritdoc}
@@ -48,7 +48,7 @@ class ModeldessangeSdHero extends FormatageModelsSection {
     FormatageModelsThemes::formatSettingValues($build);
     return $build;
   }
-
+  
   function defaultConfiguration() {
     return [
       'load_libray' => true,
@@ -69,5 +69,5 @@ class ModeldessangeSdHero extends FormatageModelsSection {
       ]
     ] + parent::defaultConfiguration();
   }
-
+  
 }
